@@ -40,10 +40,9 @@ const pathPoly=(pts)=>{ctx.moveTo(pts[0][0],pts[0][1]);for(let i=1;i<pts.length;
 // ---------- logos ----------
 // right-side art & extras as function of a (time since landing) and d (time since departure start)
 const LOGOS=[
- { // 0: Roam !ndustries
-  L:G.R,
-  right(a,d){const e=arr(a,0.05,0.75,outBack(1.1));const k=dep(d,0,0.4);if(e<=0||k<=0)return {holes:[]};
-    return {holes:glyph(G.bang,k,-(1-e)*95)};},
+ { // 0: !nventions Inc. (bang on the letter face)
+  L:G.bang,
+  right(){return {holes:[]};},
   boxes(){return [];}
  },
  { // 1: Roam office (O4)
